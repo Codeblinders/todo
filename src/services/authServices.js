@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const SERVER_URL = 'http://localhost:5002/api';
+const SERVER_URL = 'http://localhost:4000/api';
 
 
 const registerUser = (data) => {
