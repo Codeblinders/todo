@@ -1,0 +1,207 @@
+/* Login.module.css */
+
+/* Changed background color to a lighter gradient */
+body {
+  background:  linear-gradient(135deg, #284c85 0%, #334155 100%);
+  min-height: 100vh;
+  transition: background 1s ease;
+}
+
+/* Add hover effect for background */
+body:hover {
+  background:  linear-gradient(135deg, #28477c 0%, #334155 100%);
+}
+
+.login__card {
+  max-width: 420px;
+  margin: 0 auto;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  background:  linear-gradient(135deg, #1e293b 0%, #334155 100%);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: clamp(400px, 60vh, 480px);
+  margin-top: clamp(4vh, 6vh, 8vh);
+  transition: all 0.3s ease-in-out;
+  border: 1px solid rgba(203, 213, 225, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Enhanced hover effect for card */
+.login__card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+  background:  linear-gradient(135deg, #1e293b 0%, #334155 100%);
+}
+
+.login__card img {
+  width: clamp(100px, 30vw, 130px);
+  height: clamp(100px, 30vw, 130px);
+  object-fit: cover;
+  margin-bottom: clamp(1.5rem, 3vw, 2rem);
+  border-radius: 50%;
+  border: 4px solid #8b5cf6;
+  padding: clamp(8px, 1.5vw, 12px);
+  background:  linear-gradient(135deg, #1e293b 0%, #334155 100%);
+  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login__card img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(139, 92, 246, 0.3);
+}
+
+.login__card h2 {
+  margin-bottom: clamp(1.5rem, 3vw, 2rem);
+  background: linear-gradient(90deg, #60a5fa 0%, #8b5cf6 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: clamp(1.8rem, 5vw, 2.2rem);
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.input__wrapper {
+  width: 100%;
+  margin-bottom: clamp(1.2rem, 2vw, 1.8rem);
+  position: relative;
+}
+
+.input__inline__wrapper {
+  width: 100%;
+  margin-bottom: clamp(1.2rem, 2vw, 1.8rem);
+  display: flex;
+  gap: clamp(8px, 1.5vw, 10px);
+  flex-wrap: wrap;
+}
+
+.input__wrapper :global(.ant-input),
+.input__wrapper :global(.ant-input-password),
+.input__inline__wrapper :global(.ant-input) {
+  padding: clamp(10px, 1.5vw, 12px);
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  border-radius: 8px;
+  border: 2px solid #cbd5e1;
+  background: #ffffff;
+  color: #1e293b;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.input__inline__wrapper :global(.ant-input) {
+  flex: 1;
+  min-width: 0;
+}
+
+.input__wrapper :global(.ant-input:focus),
+.input__wrapper :global(.ant-input-password:focus),
+.input__inline__wrapper :global(.ant-input:focus) {
+  border-color: #8b5cf6;
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.2);
+  background: #ffffff;
+}
+
+.input__info {
+  width: 100%;
+  margin-bottom: clamp(1.5rem, 2.5vw, 2rem);
+  text-align: right;
+  font-size: clamp(0.85rem, 1.5vw, 0.95rem);
+  color: #64748b;
+}
+
+.input__info a {
+  background: linear-gradient(135deg, #2d69b3 0%, #8b5cf6 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: 600;
+  transition: opacity 0.3s ease;
+}
+
+.login__card :global(.ant-btn-primary) {
+  width: 100%;
+  padding: clamp(10px, 1.5vw, 12px);
+  height: auto;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  border-radius: 8px;
+  background: linear-gradient(45deg, #60a5fa 0%, #8b5cf6 100%);
+  border: none;
+  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.2);
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.login__card :global(.ant-btn-primary:hover) {
+  background: linear-gradient(45deg, #31b2ed 0%, #421bb7 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(139, 92, 246, 0.3);
+}
+
+.login__card :global(.ant-btn-primary:disabled) {
+  background: #94a3b8;
+  box-shadow: none;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .login__card {
+    max-width: 90vw;
+    min-height: 360px;
+  }
+
+  .input__inline__wrapper {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .login__card h2 {
+    font-size: 1.6rem;
+  }
+}
+
+/* Dynamic Effects */
+@keyframes subtlePulse {
+  0%, 100% { opacity: 0.1; }
+  50% { opacity: 0.15; }
+}
+
+.login__card::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(45deg, #60a5fa, #8b5cf6, #60a5fa);
+  background-size: 200% 200%;
+  border-radius: 16px;
+  z-index: -1;
+  animation: subtlePulse 4s ease infinite, subtleGlow 15s ease infinite;
+}
+
+@keyframes subtleGlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* High contrast for accessibility */
+@media (prefers-contrast: high) {
+  .login__card {
+    background: #ffffff;
+    border: 1px solid #64748b;
+  }
+  
+  .input__wrapper :global(.ant-input) {
+    border-color: #64748b;
+    background: #ffffff;
+  }
+}
