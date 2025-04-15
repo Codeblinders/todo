@@ -1,9 +1,7 @@
----
 
-```markdown
 # 📝 Todo App
 
-A simple and intuitive **To-Do List** application built with **React** for the frontend and **Node.js + Express** for the backend. Designed to help users manage their daily tasks efficiently with features like add, edit, delete, and mark tasks as completed.
+A simple and intuitive **To-Do List** application built with **React** for the frontend and Node.js + Express for the backend. Designed to help users manage their daily tasks efficiently with features like add, edit, delete, and mark tasks as completed.
 
 ## 🚀 Features
 
